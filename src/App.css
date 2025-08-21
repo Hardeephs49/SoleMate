@@ -1,0 +1,374 @@
+/* Basic reset and global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Lato', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode .App {
+  background-color: #121212;
+}
+
+/* Light mode styles */
+body.light-mode {
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
+
+body.light-mode .App {
+  background-color: #ffffff;
+}
+
+/* Smooth transitions */
+.App {
+  transition: background-color 0.3s ease;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', 'Poppins', sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  transition: color 0.3s ease;
+}
+
+/* Dark mode typography */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+  color: #ffffff;
+}
+
+body.dark-mode p {
+  color: #e0e0e0;
+}
+
+/* Light mode typography */
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode h3,
+body.light-mode h4,
+body.light-mode h5,
+body.light-mode h6 {
+  color: #1a1a1a;
+}
+
+body.light-mode p {
+  color: #333333;
+}
+
+/* Links */
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Dark mode links */
+body.dark-mode a {
+  color: #64b5f6;
+}
+
+body.dark-mode a:hover {
+  color: #90caf9;
+}
+
+/* Light mode links */
+body.light-mode a {
+  color: #1976d2;
+}
+
+body.light-mode a:hover {
+  color: #1565c0;
+}
+
+/* Buttons */
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* Focus styles */
+*:focus {
+  outline: 2px solid #ff6b35;
+  outline-offset: 2px;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff6b35;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e64a19;
+}
+
+/* Dark mode scrollbar */
+body.dark-mode ::-webkit-scrollbar-track {
+  background: #2d2d2d;
+}
+
+body.dark-mode ::-webkit-scrollbar-thumb {
+  background: #ff8a65;
+}
+
+body.dark-mode ::-webkit-scrollbar-thumb:hover {
+  background: #ff6b35;
+}
+
+/* Dark mode specific component styles */
+body.dark-mode .HomeContainer {
+  background-color: #121212;
+}
+
+body.dark-mode .HeroSection {
+  background: linear-gradient(135deg, #1a237e 0%, #4a148c 100%);
+}
+
+body.dark-mode .FeaturedSection {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .CategoriesSection {
+  background-color: #2d2d2d;
+}
+
+body.dark-mode .NewsletterSection {
+  background: linear-gradient(135deg, #2d2d2d, #424242);
+}
+
+body.dark-mode .ProductCardWrapper {
+  background-color: #2d2d2d;
+  color: #ffffff;
+}
+
+body.dark-mode .CategoryCard {
+  background-color: #2d2d2d;
+  color: #ffffff;
+}
+
+body.dark-mode .AboutSection {
+  background-color: #2d2d2d;
+  color: #ffffff;
+}
+
+body.dark-mode .ValueCard {
+  background-color: #2d2d2d;
+  color: #ffffff;
+}
+
+body.dark-mode .TeamMember {
+  background-color: #2d2d2d;
+  color: #ffffff;
+}
+
+body.dark-mode .ContactSection {
+  background: linear-gradient(135deg, #2d2d2d, #424242);
+}
+
+/* Additional dark mode styles for better contrast */
+body.dark-mode .HeroTitle,
+body.dark-mode .HeroSubtitle {
+  color: #ffffff;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .SectionTitle {
+  color: #ffffff;
+}
+
+body.dark-mode .ProductTitle,
+body.dark-mode .CategoryTitle,
+body.dark-mode .ValueTitle,
+body.dark-mode .MemberName {
+  color: #ffffff;
+}
+
+body.dark-mode .ProductDescription,
+body.dark-mode .CategoryDescription,
+body.dark-mode .ValueDescription,
+body.dark-mode .MemberBio {
+  color: #e0e0e0;
+}
+
+body.dark-mode .NewsletterTitle,
+body.dark-mode .ContactTitle {
+  color: #ffffff;
+}
+
+body.dark-mode .NewsletterDescription,
+body.dark-mode .ContactText {
+  color: #e0e0e0;
+}
+
+/* Light mode specific component styles */
+body.light-mode .HomeContainer {
+  background-color: #ffffff;
+}
+
+body.light-mode .HeroSection {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+body.light-mode .FeaturedSection {
+  background-color: #ffffff;
+}
+
+body.light-mode .CategoriesSection {
+  background-color: #f5f5f5;
+}
+
+body.light-mode .NewsletterSection {
+  background: linear-gradient(135deg, #f5f5f5, #eeeeee);
+}
+
+body.light-mode .ProductCardWrapper {
+  background-color: #fafafa;
+  color: #1a1a1a;
+}
+
+body.light-mode .CategoryCard {
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
+
+body.light-mode .AboutSection {
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
+
+body.light-mode .ValueCard {
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
+
+body.light-mode .TeamMember {
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
+
+body.light-mode .ContactSection {
+  background: linear-gradient(135deg, #f5f5f5, #eeeeee);
+}
+
+/* Light mode typography */
+body.light-mode .HeroTitle,
+body.light-mode .HeroSubtitle {
+  color: #ffffff;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.light-mode .SectionTitle {
+  color: #1a1a1a;
+}
+
+body.light-mode .ProductTitle,
+body.light-mode .CategoryTitle,
+body.light-mode .ValueTitle,
+body.light-mode .MemberName {
+  color: #1a1a1a;
+}
+
+body.light-mode .ProductDescription,
+body.light-mode .CategoryDescription,
+body.light-mode .ValueDescription,
+body.light-mode .MemberBio {
+  color: #757575;
+}
+
+body.light-mode .NewsletterTitle,
+body.light-mode .ContactTitle {
+  color: #1a1a1a;
+}
+
+body.light-mode .NewsletterDescription,
+body.light-mode .ContactText {
+  color: #757575;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  padding-top: 80px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  main {
+    padding-top: 70px;
+  }
+}
+
+/* Loading animation */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.loading::after {
+  content: '';
+  width: 32px;
+  height: 32px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Fade in animation */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Slide up animation */
+.slide-up {
+  animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
